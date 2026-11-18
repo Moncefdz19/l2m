@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2M | The Hybrid Hoodie - Luxury Streetwear</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Syncopate (Futuristic), Montserrat (Latin), Cairo (Arabic) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Montserrat:wght@200;400;600;800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        arabic: ['Cairo', 'sans-serif'],
+                        sans: ['Montserrat', 'Cairo', 'sans-serif'],
+                        display: ['Syncopate', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#030303',
+                            dark: '#09090b',
+                            card: '#111113',
+                            border: 'rgba(255,255,255,0.08)',
+                            silver: '#e5e7eb',
+                            gold: '#b89562'
+                        }
+                    },
+                    animation: {
+                        'marquee': 'marquee 28s linear infinite',
+                        'glow': 'glow 4s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(50%)' },
+                        },
+                        glow: {
+                            '0%': { opacity: '0.18', transform: 'scale(1)' },
+                            '100%': { opacity: '0.35', transform: 'scale(1.1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #030303;
+            color: #e5e7eb;
+            font-family: 'Cairo', 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Metallic Silver Foil Typography */
+        .text-silver-foil {
+            background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 45%, #525252 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Subtle Futuristic Tech Grid */
+        .bg-tech-grid {
+            background-size: 48px 48px;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #030303; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+        /* Premium Form Inputs */
+        .premium-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .premium-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.06);
+            border-color: #ffffff;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
+        }
+        .premium-input option {
+            background-color: #09090b;
+            color: #ffffff;
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Size & Delivery Active States */
+        .option-pill.selected {
+            background-color: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-white selection:text-black bg-tech-grid">
+
+    <!-- Ambient Background Glows -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-zinc-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-glow pointer-events-none z-0"></div>
+    <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-zinc-800 rounded-full mix-blend-screen filter blur-[130px] opacity-25 animate-glow pointer-events-none z-0" style="animation-delay: 2s;"></div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastBox" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[120] hidden transition-all duration-300">
+        <div id="toastMessage" class="px-6 py-3 rounded-xl bg-zinc-900 border border-white/20 text-white text-xs md:text-sm font-semibold shadow-2xl flex items-center gap-3"></div>
+    </div>
+
+    <!-- Minimalist Navbar -->
+    <nav class="fixed w-full top-0 z-50 bg-black/75 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="font-display text-2xl md:text-3xl font-bold tracking-[0.25em] text-silver-foil">L2M</a>
+
+            <!-- Quick CTA -->
+            <a href="#checkout" class="px-4 py-2 rounded-xl bg-white text-black font-bold text-xs md:text-sm hover:bg-zinc-200 transition">
+                اطلب الآن
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero & Interactive Product Showcase -->
+    <header class="relative pt-28 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 max-w-7xl mx-auto z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            
+            <!-- Left/Top: Product Gallery -->
+            <div class="lg:col-span-6 space-y-4">
+                <div class="relative rounded-2xl overflow-hidden bg-brand-card border border-white/10 aspect-[4/5] group shadow-2xl">
+                    <img id="mainProductImg" src="" alt="L2M Hybrid Hoodie" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x1000/09090b/e5e7eb?text=L2M+HYBRID+HOODIE'">
+                    
+                    <!-- Top Badges -->
+                    <div class="absolute top-4 right-4 flex flex-col gap-2 items-end">
+                        <span id="badgeStock" class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-[11px] font-bold text-white tracking-wide">
+                            هودي L2M
+                        </span>
+                        <span class="px-3 py-1 rounded-full bg-brand-gold/20 backdrop-blur-md border border-brand-gold/40 text-[11px] font-bold text-amber-200">
+                            Fade Black Molleton
+                        </span>
+                    </div>
+
+                    <!-- Image Caption -->
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center bg-black/70 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10">
+                        <span id="mainImgLabel" class="text-xs font-semibold text-zinc-200">الواجهة الأمامية - شعار L2M بارز</span>
+                        <span class="font-display text-[10px] tracking-widest text-zinc-400">DROP 01</span>
+                    </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div id="galleryThumbs" class="grid grid-cols-4 gap-3">
+                    <!-- Rendered dynamically from SITE_CONFIG -->
+                </div>
+            </div>
+
+            <!-- Right/Bottom: Product Copy & Quick Info -->
+            <div class="lg:col-span-6 text-right space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-zinc-300">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>متوفر للتوصيل الفوري لـ 58 ولاية (ZR Express)</span>
+                </div>
+
+                <div>
+                    <p class="font-display text-xs tracking-[0.35em] text-zinc-400 uppercase mb-2" dir="ltr">LUXURY DARK TECHWEAR</p>
+                    <h1 id="heroTitle" class="text-4xl sm:text-5xl md:text-6xl font-black text-silver-foil leading-tight">
+                        هودي L2M الهجين
+                    </h1>
+                </div>
+
+                <p id="heroSubtitle" class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                    تصميم حصري يجمع بين الفخامة والعملية بقصة <strong class="text-white">Oversize</strong> عريضة وقماش مونتون أسود فاهي. مزود بقناع وجه (كارغول) يتحول بسلاسة إلى كاشني، وقفازات شتوية مخفية تحت الهودي بين الهودي والبطن، مع تطريز فضي بارز وسلك شوك ذهبي مطفي.
+                </p>
+
+                <!-- Price Block -->
+                <div class="flex items-baseline gap-4 py-4 border-y border-white/10">
+                    <span id="displayPrice" class="text-3xl sm:text-4xl font-black text-white">6,500 دج</span>
+                    <span id="displayOldPrice" class="text-lg text-zinc-500 line-through">8,200 دج</span>
+                    <span class="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-bold">الدفع عند الاستلام</span>
+                </div>
+
+                <!-- Key Highlights Mini Grid -->
+                <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm">
+                    <div class="p-3.5 rounded-xl bg-brand-card border border-white/10 flex items-center gap-3">
+                        <span class="text-lg">🥷</span>
+                        <div>
+                            <div class="font-bold text-white">كارغول / كاشني</div>
+                            <div class="text-[11px] text-zinc-400">متحول بلمسة واحدة</div>
+                        </div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-brand-card border border-white/10 flex items-center gap-3">
+                        <span class="text-lg">🧤</span>
+                        <div>
+                            <div class="font-bold text-white">قفازات مدمجة</div>
+                            <div class="text-[11px] text-zinc-400">مخفية تحت الهودي بالبطن</div>
+                        </div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-brand-card border border-white/10 flex items-center gap-3">
+                        <span class="text-lg">⛓️</span>
+                        <div>
+                            <div class="font-bold text-white">تطريز فاخر 3D</div>
+                            <div class="text-[11px] text-zinc-400">شعار فضي + شوك ذهبي</div>
+                        </div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-brand-card border border-white/10 flex items-center gap-3">
+                        <span class="text-lg">🚚</span>
+                        <div>
+                            <div class="font-bold text-white">توصيل سريع</div>
+                            <div class="text-[11px] text-zinc-400">للمنزل أو مكتب ZR</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <a href="#checkout" class="flex-1 py-4 px-8 rounded-xl bg-white text-black font-black text-sm md:text-base text-center hover:bg-zinc-200 transition shadow-[0_0_30px_rgba(255,255,255,0.15)]">
+                        اطلب قطعتك الآن (COD)
+                    </a>
+                    <button onclick="openSizeGuide()" class="py-4 px-6 rounded-xl bg-white/5 border border-white/15 text-white font-bold text-sm hover:bg-white/10 transition">
+                        دليل المقاسات (Oversize)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Infinite Marquee -->
+    <div class="w-full bg-white text-black py-3 overflow-hidden border-y border-white/20 flex z-20 relative" dir="ltr">
+        <div class="whitespace-nowrap animate-marquee font-display font-bold tracking-[0.2em] text-[11px] uppercase flex items-center">
+            <span class="mx-6">PREMIUM FADE BLACK MOLLETON</span> •
+            <span class="mx-6">CONVERTIBLE CARGOULE MASK</span> •
+            <span class="mx-6">HIDDEN BELLY POCKET GLOVES</span> •
+            <span class="mx-6">3D SILVER EMBROIDERY</span> •
+            <span class="mx-6">RUSTIC GOLD BARBED WIRE</span> •
+            <span class="mx-6">EXTRA OVERSIZED FIT</span> •
+            <span class="mx-6">58 WILAYAS COD</span> •
+            <span class="mx-6">PREMIUM FADE BLACK MOLLETON</span> •
+            <span class="mx-6">CONVERTIBLE CARGOULE MASK</span> •
+            <span class="mx-6">HIDDEN BELLY POCKET GLOVES</span> •
+            <span class="mx-6">3D SILVER EMBROIDERY</span> •
+            <span class="mx-6">RUSTIC GOLD BARBED WIRE</span> •
+        </div>
+    </div>
+
+    <!-- Bento Grid Engineering Section -->
+    <section class="py-20 md:py-28 px-4 sm:px-6 max-w-7xl mx-auto z-20 relative">
+        <div class="text-center mb-14 reveal">
+            <p class="font-display text-xs tracking-[0.35em] text-zinc-500 uppercase mb-3" dir="ltr">ENGINEERED DETAILS</p>
+            <h2 class="text-3xl md:text-4xl font-black text-silver-foil">لماذا هودي L2M مختلف عن الجميع؟</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- Card 1 -->
+            <div class="md:col-span-2 rounded-2xl bg-brand-card border border-white/10 p-8 relative overflow-hidden group hover:border-white/25 transition reveal">
+                <div class="absolute -top-12 -left-12 w-48 h-48 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition"></div>
+                <span class="text-xs font-bold text-zinc-500 uppercase tracking-widest block mb-2">01 / نظام القناع المزدوج</span>
+                <h3 class="text-xl md:text-2xl font-bold text-white mb-3">كارغول تكتيكي يتحول إلى كاشني فاخر</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed max-w-2xl">
+                    مصنوع من قماش قطن ليكرا مرن وناعم مع سحاب مركزي وأزرار كبس معدنية. ارفعه لحماية كاملة للوجه من البرد والرياح، أو أنزله ليلتف حول الرقبة بشكل أنيق كـ "كاشني" مدمج دون أي إزعاج.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="rounded-2xl bg-brand-card border border-white/10 p-8 relative overflow-hidden group hover:border-white/25 transition reveal">
+                <span class="text-xs font-bold text-zinc-500 uppercase tracking-widest block mb-2">02 / حماية مخفية</span>
+                <h3 class="text-xl font-bold text-white mb-3">قفازات تحت الهودي</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">
+                    قفازات شتوية مرنة ومخفية بذكاء بين الهودي والبطن، يمكنك إخراجها فوراً عند البرد أو إخفاؤها بكل سهولة.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="rounded-2xl bg-brand-card border border-white/10 p-8 relative overflow-hidden group hover:border-white/25 transition reveal">
+                <span class="text-xs font-bold text-brand-gold uppercase tracking-widest block mb-2">03 / لمسة فنية حصرية</span>
+                <h3 class="text-xl font-bold text-white mb-3">تطريز سلك الشوك الذهبي</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">
+                    تطريز متقن يلتف 360 درجة حول الذراع بلون ذهبي مطفي فاخر، يتناغم مع شعار L2M الفضي البارز (3D) على الصدر وشعار خلفي صغير وأنيق.
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="md:col-span-2 rounded-2xl bg-brand-card border border-white/10 p-8 relative overflow-hidden group hover:border-white/25 transition reveal">
+                <span class="text-xs font-bold text-zinc-500 uppercase tracking-widest block mb-2">04 / جودة الخامة</span>
+                <h3 class="text-xl md:text-2xl font-bold text-white mb-3">قماش مونتون أسود فاهي</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed max-w-2xl">
+                    قماش شتوي فاخر يحافظ على هيكل القصة الفضفاضة (Extra Oversized Fit) والقبعة الضخمة ويمنحك إطلالة راقية.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COD Checkout Section (58 Wilayas + Communes + ZR Express + Google Sheets) -->
+    <section id="checkout" class="py-20 md:py-28 px-4 sm:px-6 bg-zinc-950/80 border-t border-white/10 relative z-20">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12 reveal">
+                <p class="font-display text-xs tracking-[0.35em] text-zinc-500 uppercase mb-2" dir="ltr">CASH ON DELIVERY • ALGERIA</p>
+                <h2 class="text-3xl md:text-4xl font-black text-white mb-3">أكمل طلبك الآن</h2>
+                <p class="text-zinc-400 text-sm">املأ معلوماتك بدقة وسنتصل بك هاتفياً لتأكيد الطلبية قبل الشحن عبر <span class="text-white font-semibold">ZR Express</span>.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Order Form -->
+                <div class="lg:col-span-7 bg-brand-card border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl reveal">
+                    <form id="codForm" onsubmit="submitOrder(event)" class="space-y-6">
+                        
+                        <!-- Size Selection -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2.5">
+                                <label class="text-xs font-bold text-zinc-300">اختر المقاس (قصة Oversize)</label>
+                                <button type="button" onclick="openSizeGuide()" class="text-[11px] text-zinc-400 underline hover:text-white">جدول المقاسات</button>
+                            </div>
+                            <div class="grid grid-cols-5 gap-2" id="sizeSelector">
+                                <button type="button" onclick="selectSize('S', this)" class="option-pill py-2.5 rounded-xl border border-white/15 text-xs font-bold text-zinc-300 hover:border-white transition">S</button>
+                                <button type="button" onclick="selectSize('M', this)" class="option-pill py-2.5 rounded-xl border border-white/15 text-xs font-bold text-zinc-300 hover:border-white transition">M</button>
+                                <button type="button" onclick="selectSize('L', this)" class="option-pill selected py-2.5 rounded-xl border border-white/15 text-xs font-bold transition">L</button>
+                                <button type="button" onclick="selectSize('XL', this)" class="option-pill py-2.5 rounded-xl border border-white/15 text-xs font-bold text-zinc-300 hover:border-white transition">XL</button>
+                                <button type="button" onclick="selectSize('XXL', this)" class="option-pill py-2.5 rounded-xl border border-white/15 text-xs font-bold text-zinc-300 hover:border-white transition">XXL</button>
+                            </div>
+                        </div>
+
+                        <!-- Personal Info -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-zinc-300 mb-2">الاسم واللقب *</label>
+                                <input type="text" id="custName" required placeholder="مثال: أمين بن علي" class="premium-input w-full px-4 py-3 rounded-xl text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-zinc-300 mb-2">رقم الهاتف *</label>
+                                <input type="tel" id="custPhone" required dir="ltr" placeholder="05XX XX XX XX" pattern="0[567][0-9]{8}" title="يرجى إدخال رقم هاتف جزائري صحيح مكون من 10 أرقام يبدأ بـ 05 أو 06 أو 07" class="premium-input w-full px-4 py-3 rounded-xl text-sm text-left">
+                            </div>
+                        </div>
+
+                        <!-- Wilaya & Commune (All 58 Wilayas) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-zinc-300 mb-2">الولاية (58 ولاية) *</label>
+                                <select id="wilayaSelect" required onchange="onWilayaChange()" class="premium-input w-full px-4 py-3 rounded-xl text-sm">
+                                    <option value="">-- اختر ولايتك --</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-zinc-300 mb-2">البلدية *</label>
+                                <select id="communeSelect" required onchange="onCommuneChange()" class="premium-input w-full px-4 py-3 rounded-xl text-sm">
+                                    <option value="">-- اختر الولاية أولاً --</option>
+                                </select>
+                                <!-- Optional manual commune input if user chooses "بلدية أخرى" -->
+                                <input type="text" id="customCommuneInput" placeholder="اكتب اسم بلديتك هنا" class="premium-input w-full px-4 py-3 rounded-xl text-sm mt-2 hidden">
+                            </div>
+                        </div>
+
+                        <!-- Delivery Type (ZR Express Home vs Stop Desk) -->
+                        <div>
+                            <label class="block text-xs font-bold text-zinc-300 mb-2.5">طريقة التوصيل (ZR Express)</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <button type="button" id="btnHomeDelivery" onclick="selectDeliveryType('home')" class="option-pill selected p-4 rounded-xl border border-white/15 text-right transition flex justify-between items-center">
+                                    <div>
+                                        <div class="font-bold text-sm">التوصيل إلى المنزل</div>
+                                        <div class="text-[11px] opacity-75">توصيل لباب البيت (À domicile)</div>
+                                    </div>
+                                    <span id="homePriceTag" class="font-bold text-xs">600 دج</span>
+                                </button>
+                                <button type="button" id="btnDeskDelivery" onclick="selectDeliveryType('desk')" class="option-pill p-4 rounded-xl border border-white/15 text-right transition flex justify-between items-center text-zinc-300">
+                                    <div>
+                                        <div class="font-bold text-sm">مكتب ZR Express</div>
+                                        <div class="text-[11px] opacity-75">استلام من المكتب (Stop Desk)</div>
+                                    </div>
+                                    <span id="deskPriceTag" class="font-bold text-xs">400 دج</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Address / Note -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
+                            <div class="sm:col-span-2">
+                                <label class="block text-xs font-bold text-zinc-300 mb-2">العنوان الدقيق أو ملاحظة (اختياري)</label>
+                                <input type="text" id="custAddress" placeholder="الحي، الشارع، أو وقت الاتصال المفضل..." class="premium-input w-full px-4 py-3 rounded-xl text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-zinc-300 mb-2">الكمية</label>
+                                <div class="flex items-center justify-between bg-white/5 border border-white/15 rounded-xl px-2 py-1.5">
+                                    <button type="button" onclick="changeQty(-1)" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold transition">-</button>
+                                    <span id="qtyDisplay" class="font-bold text-white text-sm">1</span>
+                                    <button type="button" onclick="changeQty(1)" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold transition">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-white text-black font-black text-sm md:text-base hover:bg-zinc-200 transition flex items-center justify-center gap-3 shadow-[0_0_25px_rgba(255,255,255,0.15)]">
+                            <span id="submitBtnText">تأكيد الطلب الآن • الدفع عند الاستلام</span>
+                            <svg id="submitSpinner" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Order Summary Card -->
+                <div class="lg:col-span-5 bg-brand-card border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6 sticky top-24 reveal">
+                    <h3 class="text-lg font-bold text-white border-b border-white/10 pb-4">ملخص الطلبية</h3>
+                    
+                    <div class="flex gap-4 items-center">
+                        <img id="summaryThumb" src="" alt="L2M Hoodie" class="w-20 h-24 rounded-xl object-cover border border-white/10" onerror="this.src='https://placehold.co/200x250/09090b/e5e7eb?text=L2M'">
+                        <div class="space-y-1">
+                            <div id="summaryTitle" class="font-bold text-white text-sm">هودي L2M الهجين - أسود فاهي</div>
+                            <div class="text-xs text-zinc-400">المقاس: <span id="summarySize" class="text-white font-bold">L</span></div>
+                            <div class="text-xs text-zinc-400">الكمية: <span id="summaryQty" class="text-white font-bold">1</span></div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 text-sm border-t border-white/10 pt-4">
+                        <div class="flex justify-between text-zinc-400">
+                            <span>سعر المنتج</span>
+                            <span id="summarySubtotal" class="text-white font-semibold">6,500 دج</span>
+                        </div>
+                        <div class="flex justify-between text-zinc-400">
+                            <span>سعر التوصيل (<span id="summaryDeliveryLabel">للمنزل</span>)</span>
+                            <span id="summaryShipping" class="text-white font-semibold">600 دج</span>
+                        </div>
+                        <div class="flex justify-between text-base font-black text-white border-t border-white/10 pt-4">
+                            <span>المجموع الكلي للدفع</span>
+                            <span id="summaryTotal" class="text-xl text-emerald-400">7,100 دج</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-xs text-zinc-400 leading-relaxed space-y-1.5">
+                        <div class="text-white font-bold flex items-center gap-2">
+                            <span>🛡️</span> ضمان الجودة والمعاينة
+                        </div>
+                        <p>يمكنك فحص القطعة والتأكد من جودة القماش والتطريز قبل الدفع عند الاستلام.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black border-t border-white/10 text-center relative z-20">
+        <div class="font-display text-3xl font-bold tracking-[0.25em] text-white/30 mb-4">L2M</div>
+        <a id="footerInstaLink" href="https://instagram.com/L2M_DZ" target="_blank" class="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition text-sm mb-6" dir="ltr">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span id="footerInstaHandle">@L2M_DZ</span>
+        </a>
+        <div class="text-[11px] text-zinc-600 mb-4">&copy; 2026 L2M LUXURY STREETWEAR — ALGERIA</div>
+        <div class="flex justify-center">
+            <button onclick="openAdminGate()" class="text-zinc-700 hover:text-zinc-400 text-[10px] transition px-4 py-2">⚙️ إعدادات المتجر</button>
+        </div>
+    </footer>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- 0. Confirm Order Modal -->
+    <div id="confirmOrderModal" class="fixed inset-0 z-[110] hidden items-center justify-center bg-black/85 backdrop-blur-md p-4">
+        <div class="bg-brand-card border border-white/20 rounded-2xl p-6 max-w-sm w-full text-center space-y-4 shadow-2xl">
+            <div class="text-5xl mb-4">🤔</div>
+            <h3 class="text-xl font-black text-white">هل أنت متأكد من الطلبية؟</h3>
+            <p class="text-xs text-zinc-400">سيتم تسجيل طلبك وتجهيزه للشحن الفوري، يرجى التأكيد فقط إذا كنت متأكداً من رغبتك في الشراء.</p>
+            <div class="flex gap-3 pt-4">
+                <button onclick="processConfirmedOrder()" class="flex-1 py-3 rounded-xl bg-emerald-500 text-black font-bold text-sm hover:bg-emerald-400 transition">نعم، متأكد</button>
+                <button onclick="closeModal('confirmOrderModal')" class="flex-1 py-3 rounded-xl bg-white/5 text-white font-bold text-sm hover:bg-white/10 transition">لا، تراجع</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. Luxury Order Confirmation Receipt Modal -->
+    <div id="receiptModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 backdrop-blur-md p-4">
+        <div class="bg-brand-card border border-white/20 rounded-2xl p-8 max-w-md w-full relative shadow-2xl">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl">✓</div>
+            <div class="text-center space-y-2 mb-6">
+                <div class="font-display text-xl font-bold tracking-[0.2em] text-white">L2M</div>
+                <h3 class="text-xl font-black text-white">تم تسجيل طلبيتك بنجاح!</h3>
+                <p class="text-xs text-zinc-400">شكراً لثقتك بنا، سنتصل بك قريباً لتأكيد الطلب وشحنه عبر ZR Express.</p>
+            </div>
+            <div id="receiptDetails" class="bg-black/50 border border-white/10 rounded-xl p-4 text-xs space-y-2 mb-6 text-zinc-300">
+                <!-- Populated dynamically -->
+            </div>
+            <button onclick="closeModal('receiptModal')" class="w-full py-3 rounded-xl bg-white text-black font-bold text-sm hover:bg-zinc-200 transition">
+                إغلاق
+            </button>
+        </div>
+    </div>
+
+    <!-- 2. Size Guide Modal -->
+    <div id="sizeGuideModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 backdrop-blur-md p-4">
+        <div class="bg-brand-card border border-white/20 rounded-2xl p-6 sm:p-8 max-w-lg w-full relative">
+            <div class="flex justify-between items-center mb-5 border-b border-white/10 pb-3">
+                <h3 class="text-lg font-bold text-white">دليل المقاسات (قصة Oversize عريضة)</h3>
+                <button onclick="closeModal('sizeGuideModal')" class="text-zinc-400 hover:text-white text-xl">&times;</button>
+            </div>
+            <p class="text-xs text-zinc-400 mb-4">القصة فضفاضة (Extra Oversized)، يُنصح باختيار مقاسك المعتاد للحصول على مظهر Streetwear المثالي.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-right border-collapse">
+                    <thead>
+                        <tr class="border-b border-white/15 text-zinc-400">
+                            <th class="py-2.5 px-2">المقاس</th>
+                            <th class="py-2.5 px-2">الطول (سم)</th>
+                            <th class="py-2.5 px-2">عرض الصدر (سم)</th>
+                            <th class="py-2.5 px-2">الوزن المقترح</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5 text-zinc-200">
+                        <tr><td class="py-2.5 px-2 font-bold">S</td><td class="py-2.5 px-2">70</td><td class="py-2.5 px-2">60</td><td class="py-2.5 px-2">55 - 65 كغ</td></tr>
+                        <tr><td class="py-2.5 px-2 font-bold">M</td><td class="py-2.5 px-2">72</td><td class="py-2.5 px-2">63</td><td class="py-2.5 px-2">65 - 75 كغ</td></tr>
+                        <tr><td class="py-2.5 px-2 font-bold">L</td><td class="py-2.5 px-2">75</td><td class="py-2.5 px-2">66</td><td class="py-2.5 px-2">75 - 88 كغ</td></tr>
+                        <tr><td class="py-2.5 px-2 font-bold">XL</td><td class="py-2.5 px-2">78</td><td class="py-2.5 px-2">69</td><td class="py-2.5 px-2">88 - 100 كغ</td></tr>
+                        <tr><td class="py-2.5 px-2 font-bold">XXL</td><td class="py-2.5 px-2">80</td><td class="py-2.5 px-2">72</td><td class="py-2.5 px-2">+100 كغ</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Admin PIN Gate Modal -->
+    <div id="adminPinModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 backdrop-blur-md p-4">
+        <div class="bg-brand-card border border-white/20 rounded-2xl p-6 max-w-sm w-full text-center space-y-4">
+            <h3 class="text-lg font-bold text-white">دخول لوحة تحكم L2M</h3>
+            <p class="text-xs text-zinc-400">أدخل الرمز السري للتحكم في الصور، الأسعار، وربط Google Sheets و ZR Express (الرمز الافتراضي: <span class="text-white font-mono">2026</span>)</p>
+            <input type="password" id="adminPinInput" placeholder="****" dir="ltr" class="premium-input w-full px-4 py-3 rounded-xl text-center text-lg tracking-[0.5em]">
+            <div class="flex gap-2">
+                <button onclick="verifyAdminPin()" class="flex-1 py-3 rounded-xl bg-white text-black font-bold text-xs hover:bg-zinc-200 transition">دخول</button>
+                <button onclick="closeModal('adminPinModal')" class="px-4 py-3 rounded-xl bg-white/5 text-zinc-300 text-xs hover:bg-white/10 transition">إلغاء</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Full Admin Settings & Integrations Modal -->
+    <div id="adminPanelModal" class="fixed inset-0 z-[105] hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 sm:p-6">
+        <div class="bg-zinc-950 border border-white/15 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden shadow-2xl">
+            
+            <!-- Admin Header -->
+            <div class="px-6 py-4 bg-zinc-900 border-b border-white/10 flex justify-between items-center">
+                <div>
+                    <h3 class="text-base sm:text-lg font-black text-white">لوحة تحكم وإعدادات L2M</h3>
+                    <p class="text-[11px] text-zinc-400">تحكم في الصور، الأسعار، Google Sheets، و ZR Express API</p>
+                </div>
+                <button onclick="closeModal('adminPanelModal')" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/15 text-zinc-300 text-lg">&times;</button>
+            </div>
+
+            <!-- Admin Tabs -->
+            <div class="flex gap-2 px-6 pt-4 border-b border-white/10 overflow-x-auto text-xs font-bold">
+                <button onclick="switchAdminTab('general')" id="tab-general" class="admin-tab px-4 py-2.5 rounded-t-xl bg-white text-black whitespace-nowrap">المنتج والصور</button>
+                <button onclick="switchAdminTab('integrations')" id="tab-integrations" class="admin-tab px-4 py-2.5 rounded-t-xl bg-white/5 text-zinc-400 hover:text-white whitespace-nowrap">Google Sheets & ZR API</button>
+                <button onclick="switchAdminTab('shipping')" id="tab-shipping" class="admin-tab px-4 py-2.5 rounded-t-xl bg-white/5 text-zinc-400 hover:text-white whitespace-nowrap">أسعار التوصيل</button>
+                <button onclick="switchAdminTab('orders')" id="tab-orders" class="admin-tab px-4 py-2.5 rounded-t-xl bg-white/5 text-zinc-400 hover:text-white whitespace-nowrap">الطلبات التجريبية (<span id="ordersCountBadge">0</span>)</button>
+            </div>
+
+            <!-- Admin Body -->
+            <div class="p-6 overflow-y-auto flex-1 space-y-6 text-sm">
+                
+                <!-- TAB 1: Product & Images -->
+                <div id="panel-general" class="admin-panel space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs text-zinc-400 mb-1.5">اسم المنتج</label>
+                            <input type="text" id="cfgTitle" class="premium-input w-full px-3 py-2.5 rounded-xl text-xs">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-zinc-400 mb-1.5">السعر الحالي (دج)</label>
+                            <input type="number" id="cfgPrice" class="premium-input w-full px-3 py-2.5 rounded-xl text-xs">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-zinc-400 mb-1.5">السعر القديم قبل التخفيض (دج)</label>
+                            <input type="number" id="cfgOldPrice" class="premium-input w-full px-3 py-2.5 rounded-xl text-xs">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-zinc-400 mb-1.5">شارة المخزون</label>
+                            <input type="text" id="cfgStockText" class="premium-input w-full px-3 py-2.5 rounded-xl text-xs">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-zinc-400 mb-1.5">حساب إنستغرام (بدون @)</label>
+                            <input type="text" id="cfgInsta" dir="ltr" class="premium-input w-full px-3 py-2.5 rounded-xl text-xs text-left">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs text-zinc-400 mb-1.5">الرمز السري للإدارة (PIN)</label>
+                            <input type="text" id="cfgAdminPin" dir="ltr" class="premium-input w-full px-3 py-2.5 rounded-xl text-xs text-left tracking-widest font-mono">
+                        </div>
+                    </div>
+
+                    <!-- Images Manager -->
+                    <div class="border-t border-white/10 pt-4 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-white text-xs">صور المنتج (يمكنك وضع رابط مباشر للصورة أو اختيار صورة من جهازك للمعاينة)</h4>
+                        </div>
+                        <div id="adminImagesEditor" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: Google Sheets & ZR Express API -->
+                <div id="panel-integrations" class="admin-panel hidden space-y-6">
+                    <!-- Google Sheets -->
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-emerald-400 text-sm">1. ربط Google Sheets (لاستقبال الطلبات تلقائياً)</h4>
+                            <button type="button" onclick="copyGoogleScriptCode()" class="px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 text-[11px] font-bold hover:bg-emerald-500/30 transition">
+                                نسخ كود Apps Script
+                            </button>
+                        </div>
+                        <p class="text-[11px] text-zinc-400 leading-relaxed">
+                            افتح Google Sheets > الإضافات (Extensions) > Apps Script > الصق الكود المنسوخ > اضغط Deploy (New deployment -> Web app -> Anyone) ثم الصق الرابط هنا:
+                        </p>
+                        <input type="url" id="cfgSheetUrl" dir="ltr" placeholder="https://script.google.com/macros/s/....../exec" class="premium-input w-full px-3 py-2.5 rounded-xl text-xs text-left">
+                    </div>
+
+                    <!-- ZR Express API -->
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-amber-400 text-sm">2. ربط ZR Express API (إرسال الطرود مباشرة)</h4>
+                            <label class="inline-flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
+                                <input type="checkbox" id="cfgZrEnabled" class="accent-white w-4 h-4">
+                                <span>تفعيل الإرسال التلقائي</span>
+                            </label>
+                        </div>
+                        <p class="text-[11px] text-zinc-400 leading-relaxed">
+                            احصل على <span class="text-white font-mono">Token</span> و <span class="text-white font-mono">Key</span> من حسابك في منصة ZR Express (ProColis) وضعهما هنا:
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-[11px] text-zinc-400 mb-1">ZR Express Token</label>
+                                <input type="text" id="cfgZrToken" dir="ltr" placeholder="أدخل الـ Token هنا" class="premium-input w-full px-3 py-2.5 rounded-xl text-xs text-left font-mono">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-zinc-400 mb-1">ZR Express Key</label>
+                                <input type="text" id="cfgZrKey" dir="ltr" placeholder="أدخل الـ Key هنا" class="premium-input w-full px-3 py-2.5 rounded-xl text-xs text-left font-mono">
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-zinc-500">
+                            ملاحظة تقنية: بسبب سياسة CORS في المتصفحات، إذا قمت بإرسال الطلب عبر Google Apps Script المرفق، يمكنك أيضاً تمرير بيانات ZR Express من خلال السكربت لضمان وصول 100% من الطرود بدون حظر المتصفح.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TAB 3: Shipping Prices -->
+                <div id="panel-shipping" class="admin-panel hidden space-y-4">
+                    <p class="text-xs text-zinc-400">اضبط أسعار التوصيل الافتراضية (تُطبق تلقائياً حسب تصنيف الولاية: شمال / هضاب / جنوب):</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-3">
+                            <h5 class="font-bold text-white text-xs">ولايات الشمال والوسط (مثال: سطيف، العاصمة، وهران...)</h5>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] text-zinc-400 mb-1">للمنزل (دج)</label>
+                                    <input type="number" id="cfgShipNorthHome" class="premium-input w-full px-3 py-2 rounded-lg text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] text-zinc-400 mb-1">مكتب ZR (دج)</label>
+                                    <input type="number" id="cfgShipNorthDesk" class="premium-input w-full px-3 py-2 rounded-lg text-xs">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-3">
+                            <h5 class="font-bold text-white text-xs">ولايات الجنوب (مثال: أدرار، تمنراست، ورقلة، بشار...)</h5>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] text-zinc-400 mb-1">للمنزل (دج)</label>
+                                    <input type="number" id="cfgShipSouthHome" class="premium-input w-full px-3 py-2 rounded-lg text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] text-zinc-400 mb-1">مكتب ZR (دج)</label>
+                                    <input type="number" id="cfgShipSouthDesk" class="premium-input w-full px-3 py-2 rounded-lg text-xs">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: Session Orders -->
+                <div id="panel-orders" class="admin-panel hidden space-y-3">
+                    <div id="sessionOrdersList" class="space-y-3 text-xs text-zinc-400">
+                        لا توجد طلبات مسجلة في هذه الجلسة بعد.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Admin Footer Actions -->
+            <div class="px-6 py-4 bg-zinc-900 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
+                <button type="button" onclick="downloadUpdatedSite()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-500 text-black font-bold text-xs hover:bg-emerald-400 transition flex items-center justify-center gap-2">
+                    <span>⬇️</span> تحميل ملف index.html بالإعدادات الجديدة (لرفعه على TiinyHost / Vercel)
+                </button>
+                <div class="flex gap-2 w-full sm:w-auto">
+                    <button type="button" onclick="applyAdminSettings()" class="flex-1 sm:flex-none px-6 py-2.5 rounded-xl bg-white text-black font-bold text-xs hover:bg-zinc-200 transition">
+                        حفظ وتطبيق الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== APPLICATION LOGIC ==================== -->
+    <script>
+        /* ==========================================================================
+           SITE_CONFIG: الإعدادات المركزية للمتجر (تُحدّث تلقائياً عند تحميل الملف)
+           ========================================================================== */
+        let SITE_CONFIG = {
+            adminPin: "2026",
+            title: "هودي L2M الهجين",
+            price: 6500,
+            oldPrice: 8200,
+            stockText: "هودي L2M",
+            instagram: "L2M_DZ",
+            googleSheetUrl: "", // ضع رابط Google Apps Script Web App هنا
+            zrExpress: {
+                enabled: false,
+                token: "",
+                key: ""
+            },
+            shipping: {
+                northHome: 600,
+                northDesk: 400,
+                southHome: 1000,
+                southDesk: 700
+            },
+            images: [
+                {
+                    label: "الواجهة الأمامية - شعار L2M بارز",
+                    url: "https://placehold.co/800x1000/0a0a0c/e5e7eb?text=L2M+FRONT+VIEW"
+                },
+                {
+                    label: "الواجهة الخلفية - قصة Oversize",
+                    url: "https://placehold.co/800x1000/0c0c0f/d4d4d8?text=L2M+BACK+VIEW"
+                },
+                {
+                    label: "الجانب - تطريز سلك الشوك الذهبي",
+                    url: "https://placehold.co/800x1000/0f0f12/b89562?text=BARBED+WIRE+SLEEVE"
+                },
+                {
+                    label: "تفاصيل الكارغول والقفازات المخفية",
+                    url: "https://placehold.co/800x1000/09090b/a1a1aa?text=CARGOULE+%26+GLOVES"
+                }
+            ]
+        };
+
+        /* ==========================================================================
+           ALL 58 ALGERIAN WILAYAS + MAJOR COMMUNES (with ZR Express IDs 1..58)
+           ========================================================================== */
+        const ALGERIA_WILAYAS = [
+            { id: 1, name: "01 - أدرار", zone: "south", communes: ["أدرار", "رقان", "أولف", "تسابيت", "زاوية كنتة", "فنوغيل"] },
+            { id: 2, name: "02 - الشلف", zone: "north", communes: ["الشلف", "تنس", "وادي الفضة", "بوقادير", "أولاد فارس", "الشطية"] },
+            { id: 3, name: "03 - الأغواط", zone: "south", communes: ["الأغواط", "أفلو", "عين ماضي", "قصر الحيران", "حاسي الرمل"] },
+            { id: 4, name: "04 - أم البواقي", zone: "north", communes: ["أم البواقي", "عين البيضاء", "عين مليلة", "مسكيانة", "سيقوس"] },
+            { id: 5, name: "05 - باتنة", zone: "north", communes: ["باتنة", "بريكة", "عين التوتة", "مروانة", "آريس", "نقاوس", "تازولت"] },
+            { id: 6, name: "06 - بجاية", zone: "north", communes: ["بجاية", "أقبو", "سيدي عيش", "خراطة", "القصر", "تازملت", "أميزور"] },
+            { id: 7, name: "07 - بسكرة", zone: "south", communes: ["بسكرة", "طولقة", "سيدي عقبة", "أورلال", "القنطرة", "زريبة الوادي"] },
+            { id: 8, name: "08 - بشار", zone: "south", communes: ["بشار", "القنادسة", "العبادلة", "تاغيت", "لحمر"] },
+            { id: 9, name: "09 - البليدة", zone: "north", communes: ["البليدة", "بوفاريك", "الأربعاء", "موزاية", "العفرون", "أولاد يعيش", "بوقرة"] },
+            { id: 10, name: "10 - البويرة", zone: "north", communes: ["البويرة", "الأخضرية", "سور الغزلان", "عين بسام", "مشدالله", "بشلول"] },
+            { id: 11, name: "11 - تمنراست", zone: "south", communes: ["تمنراست", "أبلسة", "إدلس", "تاظروك"] },
+            { id: 12, name: "12 - تبسة", zone: "north", communes: ["تبسة", "بئر العاتر", "الشريعة", "الونزة", "العوينات", "مرسط"] },
+            { id: 13, name: "13 - تلمسان", zone: "north", communes: ["تلمسان", "مغنية", "الرمشي", "الغزوات", "منصورة", "شتوان", "سبدو"] },
+            { id: 14, name: "14 - تيارت", zone: "north", communes: ["تيارت", "السوقر", "فرندة", "قصر الشلالة", "مهدية", "عين الذهب"] },
+            { id: 15, name: "15 - تيزي وزو", zone: "north", communes: ["تيزي وزو", "عزازقة", "ذراع بن خدة", "بوغني", "تيقزيرت", "أزفون", "ذراع الميزان"] },
+            { id: 16, name: "16 - الجزائر", zone: "north", communes: ["الجزائر الوسطى", "باب الزوار", "حيدرة", "الشراقة", "الرويبة", "بئر مراد رايس", "حسين داي", "درارية", "زرالدة", "الحراش", "القبة", "الأبيار", "دالي إبراهيم", "براقي", "برج الكيفان"] },
+            { id: 17, name: "17 - الجلفة", zone: "south", communes: ["الجلفة", "عين وسارة", "مسعد", "حاسي بحبح", "الشارف", "البيرين"] },
+            { id: 18, name: "18 - جيجل", zone: "north", communes: ["جيجل", "الطاهير", "الميلية", "العوانة", "زيامة منصورية", "الشقفة"] },
+            { id: 19, name: "19 - سطيف", zone: "north", communes: ["سطيف", "العلمة", "عين ولمان", "بوقاعة", "عين أرنات", "عين الكبيرة", "صالح باي", "بني ورتيلان", "عموشة", "قجال", "أولاد صابر"] },
+            { id: 20, name: "20 - سعيدة", zone: "north", communes: ["سعيدة", "عين الحجر", "يوب", "سيدي بوبكر", "الحساسنة"] },
+            { id: 21, name: "21 - سكيكدة", zone: "north", communes: ["سكيكدة", "عزابة", "القل", "الحروش", "تمالوس", "رمضان جمال"] },
+            { id: 22, name: "22 - سيدي بلعباس", zone: "north", communes: ["سيدي بلعباس", "تلاغ", "سفيزف", "بن باديس", "رأس الماء", "سيدي علي بوسيدي"] },
+            { id: 23, name: "23 - عنابة", zone: "north", communes: ["عنابة", "البوني", "الحجار", "برحال", "سيدي عمار", "سرايدي"] },
+            { id: 24, name: "24 - قالمة", zone: "north", communes: ["قالمة", "وادي الزناتي", "بوشقوف", "هيليوبوليس", "حمام دباغ"] },
+            { id: 25, name: "25 - قسنطينة", zone: "north", communes: ["قسنطينة", "الخروب", "حامة بوزيان", "ديدوش مراد", "زيغود يوسف", "عين عبيد", "المدينة الجديدة علي منجلي"] },
+            { id: 26, name: "26 - المدية", zone: "north", communes: ["المدية", "البرواقية", "قصر البخاري", "تابلاط", "بني سليمان", "وزرة"] },
+            { id: 27, name: "27 - مستغانم", zone: "north", communes: ["مستغانم", "عين تادلس", "سيدي علي", "مزغران", "حاسي ماماش", "خير الدين"] },
+            { id: 28, name: "28 - المسيلة", zone: "north", communes: ["المسيلة", "بوسعادة", "سيدي عيسى", "مقرة", "حمام الضلعة", "عين الحجل"] },
+            { id: 29, name: "29 - معسكر", zone: "north", communes: ["معسكر", "سيق", "المحمدية", "تيغنيف", "غريس", "وادي الأبطال"] },
+            { id: 30, name: "30 - ورقلة", zone: "south", communes: ["ورقلة", "حاسي مسعود", "الرويسات", "سيدي خويلد", "عين البيضاء"] },
+            { id: 31, name: "31 - وهران", zone: "north", communes: ["وهران", "بئر الجير", "السانية", "أرزيو", "عين الترك", "قديل", "وادي تليلات", "بطيوة"] },
+            { id: 32, name: "32 - البيض", zone: "south", communes: ["البيض", "بوقطب", "الأبيض سيدي الشيخ", "بريزينة", "رقاصة"] },
+            { id: 33, name: "33 - إليزي", zone: "south", communes: ["إليزي", "إن أمناس", "برج عمر إدريس", "دبداب"] },
+            { id: 34, name: "34 - برج بوعريريج", zone: "north", communes: ["برج بوعريريج", "رأس الوادي", "المنصورة", "مجانة", "برج الغدير", "الحمادية"] },
+            { id: 35, name: "35 - بومرداس", zone: "north", communes: ["بومرداس", "بودواو", "برج منايل", "دلس", "الثنية", "قورصو", "خميس الخشنة"] },
+            { id: 36, name: "36 - الطارف", zone: "north", communes: ["الطارف", "القالة", "الذرعان", "البسباس", "بن مهيدي", "بوثلجة"] },
+            { id: 37, name: "37 - تندوف", zone: "south", communes: ["تندوف", "أم العسل"] },
+            { id: 38, name: "38 - تيسمسيلت", zone: "north", communes: ["تيسمسيلت", "ثنية الحد", "برج بونعامة", "لرجام", "خميستي"] },
+            { id: 39, name: "39 - الوادي", zone: "south", communes: ["الوادي", "قمار", "الرباح", "البياضة", "الدبيلة", "حاسي خليفة"] },
+            { id: 40, name: "40 - خنشلة", zone: "north", communes: ["خنشلة", "قايس", "ششار", "بابار", "أولاد رشاش", "الحامة"] },
+            { id: 41, name: "41 - سوق أهراس", zone: "north", communes: ["سوق أهراس", "سدراتة", "مداوروش", "تاورة", "المشروحة"] },
+            { id: 42, name: "42 - تيبازة", zone: "north", communes: ["تيبازة", "القليعة", "شرشال", "حجوط", "بوسماعيل", "فوكة", "الدواودة"] },
+            { id: 43, name: "43 - ميلة", zone: "north", communes: ["ميلة", "شلغوم العيد", "فرجيوة", "تاجنانت", "التلاغمة", "وادي العثمانية"] },
+            { id: 44, name: "44 - عين الدفلى", zone: "north", communes: ["عين الدفلى", "خميس مليانة", "مليانة", "العطاف", "العبادية", "جندل"] },
+            { id: 45, name: "45 - النعامة", zone: "south", communes: ["النعامة", "المشرية", "عين الصفراء", "عسلة", "تيوت"] },
+            { id: 46, name: "46 - عين تموشنت", zone: "north", communes: ["عين تموشنت", "بني صاف", "حمام بوحجر", "العامرية", "المالح"] },
+            { id: 47, name: "47 - غرداية", zone: "south", communes: ["غرداية", "متليلي", "بريان", "القرارة", "بونورة", "ضاية بن ضحوة"] },
+            { id: 48, name: "48 - غليزان", zone: "north", communes: ["غليزان", "وادي رهيو", "مازونة", "عمي موسى", "زمورة", "يلل"] },
+            { id: 49, name: "49 - تيميمون", zone: "south", communes: ["تيميمون", "أوقروت", "شروين", "تنركوك"] },
+            { id: 50, name: "50 - برج باجي مختار", zone: "south", communes: ["برج باجي مختار", "تيمياوين"] },
+            { id: 51, name: "51 - أولاد جلال", zone: "south", communes: ["أولاد جلال", "سيدي خالد", "الدوسن"] },
+            { id: 52, name: "52 - بني عباس", zone: "south", communes: ["بني عباس", "كرزاز", "إقلي", "الواتة"] },
+            { id: 53, name: "53 - عين صالح", zone: "south", communes: ["عين صالح", "فقارة الزوى", "إينغر"] },
+            { id: 54, name: "54 - عين قزام", zone: "south", communes: ["عين قزام", "تين زواتين"] },
+            { id: 55, name: "55 - تقرت", zone: "south", communes: ["تقرت", "تماسين", "المقارين", "الطيبات", "نزلة"] },
+            { id: 56, name: "56 - جانت", zone: "south", communes: ["جانت", "برج الحواس"] },
+            { id: 57, name: "57 - المغير", zone: "south", communes: ["المغير", "جامعة", "سيدي عمران", "تندلة"] },
+            { id: 58, name: "58 - المنيعة", zone: "south", communes: ["المنيعة", "حاسي القارة", "حاسي الفحل"] }
+        ];
+
+        // State Variables
+        let selectedSize = "L";
+        let deliveryType = "home"; // 'home' or 'desk'
+        let quantity = 1;
+        let currentShippingCost = SITE_CONFIG.shipping.northHome;
+        let sessionOrders = [];
+        let pendingOrderData = null;
+
+        /* ==========================================================================
+           INITIALIZATION & UI RENDERING
+           ========================================================================== */
+        window.addEventListener("DOMContentLoaded", () => {
+            const savedConfig = localStorage.getItem('L2M_SITE_CONFIG');
+            if (savedConfig) {
+                try {
+                    SITE_CONFIG = { ...SITE_CONFIG, ...JSON.parse(savedConfig) };
+                } catch(e) {}
+            }
+            populateWilayas();
+            renderStoreUI();
+            initScrollReveal();
+        });
+
+        function formatDA(num) {
+            return Number(num).toLocaleString('en-US') + " دج";
+        }
+
+        function renderStoreUI() {
+            // Update texts & prices
+            document.getElementById("heroTitle").textContent = SITE_CONFIG.title;
+            document.getElementById("summaryTitle").textContent = SITE_CONFIG.title;
+            document.getElementById("displayPrice").textContent = formatDA(SITE_CONFIG.price);
+            document.getElementById("displayOldPrice").textContent = formatDA(SITE_CONFIG.oldPrice);
+            document.getElementById("badgeStock").textContent = SITE_CONFIG.stockText;
+            document.getElementById("footerInstaHandle").textContent = "@" + SITE_CONFIG.instagram;
+            document.getElementById("footerInstaLink").href = "https://instagram.com/" + SITE_CONFIG.instagram;
+
+            // Render Gallery
+            setMainImage(0);
+            const thumbsContainer = document.getElementById("galleryThumbs");
+            thumbsContainer.innerHTML = "";
+            SITE_CONFIG.images.forEach((img, idx) => {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.onclick = () => setMainImage(idx);
+                btn.className = "rounded-xl overflow-hidden border border-white/15 hover:border-white aspect-square bg-brand-card transition focus:outline-none";
+                btn.innerHTML = `<img src="${img.url}" alt="${img.label}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/300x300/09090b/e5e7eb?text=IMG+${idx+1}'">`;
+                thumbsContainer.appendChild(btn);
+            });
+
+            document.getElementById("summaryThumb").src = SITE_CONFIG.images[0].url;
+            updateTotals();
+        }
+
+        function setMainImage(index) {
+            const imgObj = SITE_CONFIG.images[index] || SITE_CONFIG.images[0];
+            document.getElementById("mainProductImg").src = imgObj.url;
+            document.getElementById("mainImgLabel").textContent = imgObj.label;
+        }
+
+        /* ==========================================================================
+           WILAYAS, COMMUNES & PRICING LOGIC
+           ========================================================================== */
+        function populateWilayas() {
+            const select = document.getElementById("wilayaSelect");
+            select.innerHTML = '<option value="">-- اختر ولايتك --</option>';
+            ALGERIA_WILAYAS.forEach(w => {
+                const opt = document.createElement("option");
+                opt.value = w.id;
+                opt.textContent = w.name;
+                select.appendChild(opt);
+            });
+        }
+
+        function onWilayaChange() {
+            const wId = parseInt(document.getElementById("wilayaSelect").value);
+            const communeSelect = document.getElementById("communeSelect");
+            const customInput = document.getElementById("customCommuneInput");
+            customInput.classList.add("hidden");
+            customInput.required = false;
+
+            if (!wId) {
+                communeSelect.innerHTML = '<option value="">-- اختر الولاية أولاً --</option>';
+                updateTotals();
+                return;
+            }
+
+            const wilaya = ALGERIA_WILAYAS.find(w => w.id === wId);
+            communeSelect.innerHTML = '<option value="">-- اختر البلدية --</option>';
+            wilaya.communes.forEach(c => {
+                const opt = document.createElement("option");
+                opt.value = c;
+                opt.textContent = c;
+                communeSelect.appendChild(opt);
+            });
+            // Add fallback option for any smaller commune
+            const otherOpt = document.createElement("option");
+            otherOpt.value = "__OTHER__";
+            otherOpt.textContent = "بلدية أخرى (اكتبها يدوياً)...";
+            communeSelect.appendChild(otherOpt);
+
+            updateTotals();
+        }
+
+        function onCommuneChange() {
+            const val = document.getElementById("communeSelect").value;
+            const customInput = document.getElementById("customCommuneInput");
+            if (val === "__OTHER__") {
+                customInput.classList.remove("hidden");
+                customInput.required = true;
+                customInput.focus();
+            } else {
+                customInput.classList.add("hidden");
+                customInput.required = false;
+            }
+        }
+
+        function selectSize(size, btnEl) {
+            selectedSize = size;
+            document.querySelectorAll("#sizeSelector .option-pill").forEach(b => {
+                b.classList.remove("selected");
+                b.classList.add("text-zinc-300");
+            });
+            btnEl.classList.add("selected");
+            btnEl.classList.remove("text-zinc-300");
+            document.getElementById("summarySize").textContent = size;
+        }
+
+        function selectDeliveryType(type) {
+            deliveryType = type;
+            const btnHome = document.getElementById("btnHomeDelivery");
+            const btnDesk = document.getElementById("btnDeskDelivery");
+            if (type === "home") {
+                btnHome.classList.add("selected");
+                btnHome.classList.remove("text-zinc-300");
+                btnDesk.classList.remove("selected");
+                btnDesk.classList.add("text-zinc-300");
+            } else {
+                btnDesk.classList.add("selected");
+                btnDesk.classList.remove("text-zinc-300");
+                btnHome.classList.remove("selected");
+                btnHome.classList.add("text-zinc-300");
+            }
+            updateTotals();
+        }
+
+        function changeQty(delta) {
+            quantity = Math.max(1, Math.min(10, quantity + delta));
+            document.getElementById("qtyDisplay").textContent = quantity;
+            document.getElementById("summaryQty").textContent = quantity;
+            updateTotals();
+        }
+
+        function updateTotals() {
+            const wId = parseInt(document.getElementById("wilayaSelect").value);
+            const wilaya = ALGERIA_WILAYAS.find(w => w.id === wId);
+            const isSouth = wilaya && wilaya.zone === "south";
+
+            const homeFee = isSouth ? SITE_CONFIG.shipping.southHome : SITE_CONFIG.shipping.northHome;
+            const deskFee = isSouth ? SITE_CONFIG.shipping.southDesk : SITE_CONFIG.shipping.northDesk;
+
+            document.getElementById("homePriceTag").textContent = formatDA(homeFee);
+            document.getElementById("deskPriceTag").textContent = formatDA(deskFee);
+
+            currentShippingCost = deliveryType === "home" ? homeFee : deskFee;
+            const subtotal = SITE_CONFIG.price * quantity;
+            const grandTotal = subtotal + currentShippingCost;
+
+            document.getElementById("summaryDeliveryLabel").textContent = deliveryType === "home" ? "للمنزل" : "مكتب ZR";
+            document.getElementById("summarySubtotal").textContent = formatDA(subtotal);
+            document.getElementById("summaryShipping").textContent = formatDA(currentShippingCost);
+            document.getElementById("summaryTotal").textContent = formatDA(grandTotal);
+        }
+
+        /* ==========================================================================
+           ORDER SUBMISSION: GOOGLE SHEETS + ZR EXPRESS API
+           ========================================================================== */
+        async function submitOrder(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("custName").value.trim();
+            const phone = document.getElementById("custPhone").value.trim();
+            const wId = parseInt(document.getElementById("wilayaSelect").value);
+            const wilayaObj = ALGERIA_WILAYAS.find(w => w.id === wId);
+            let commune = document.getElementById("communeSelect").value;
+            if (commune === "__OTHER__") {
+                commune = document.getElementById("customCommuneInput").value.trim();
+            }
+            const address = document.getElementById("custAddress").value.trim() || commune;
+
+            if (!wilayaObj || !commune) {
+                showToast("يرجى اختيار الولاية والبلدية أولاً", "error");
+                return;
+            }
+
+            const subtotal = SITE_CONFIG.price * quantity;
+            const total = subtotal + currentShippingCost;
+            const orderRef = "L2M-" + Math.floor(100000 + Math.random() * 900000);
+
+            pendingOrderData = {
+                orderId: orderRef,
+                date: new Date().toLocaleString("ar-DZ"),
+                product: SITE_CONFIG.title,
+                size: selectedSize,
+                quantity: quantity,
+                customerName: name,
+                phone: phone,
+                wilayaId: wilayaObj.id,
+                wilayaName: wilayaObj.name,
+                commune: commune,
+                address: address,
+                deliveryType: deliveryType === "home" ? "للمنزل (Domicile)" : "مكتب ZR (Stop Desk)",
+                zrTypeLivraison: deliveryType === "home" ? "0" : "1", // ZR Express standard: 0=Home, 1=StopDesk
+                shippingCost: currentShippingCost,
+                total: total
+            };
+
+            openModal("confirmOrderModal");
+        }
+
+        async function processConfirmedOrder() {
+            closeModal("confirmOrderModal");
+            if (!pendingOrderData) return;
+            const orderData = pendingOrderData;
+
+            // Toggle loading state
+            const btn = document.getElementById("submitBtn");
+            const btnText = document.getElementById("submitBtnText");
+            const spinner = document.getElementById("submitSpinner");
+            btn.disabled = true;
+            btnText.textContent = "جاري تسجيل طلبيتك...";
+            spinner.classList.remove("hidden");
+
+            let sheetStatus = "غير مربوط";
+            let zrStatus = "غير مفعل";
+
+            // 1. Send to Google Sheets (if configured)
+            if (SITE_CONFIG.googleSheetUrl && SITE_CONFIG.googleSheetUrl.startsWith("http")) {
+                try {
+                    await fetch(SITE_CONFIG.googleSheetUrl, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(orderData)
+                    });
+                    sheetStatus = "تم الإرسال إلى Google Sheets ✓";
+                } catch (err) {
+                    sheetStatus = "تعذر الاتصال بـ Google Sheets";
+                }
+            }
+
+            // 2. Send to ZR Express API (ProColis v1 endpoint if enabled & keys provided)
+            if (SITE_CONFIG.zrExpress.enabled && SITE_CONFIG.zrExpress.token && SITE_CONFIG.zrExpress.key) {
+                const zrPayload = {
+                    Colis: [{
+                        Tracking: orderData.orderId,
+                        TypeLivraison: orderData.zrTypeLivraison,
+                        TypeColis: "0",
+                        Confrimee: "",
+                        Client: orderData.customerName,
+                        MobileA: orderData.phone,
+                        MobileB: "",
+                        Adresse: orderData.address,
+                        IDWilaya: String(orderData.wilayaId),
+                        Commune: orderData.commune,
+                        Total: String(orderData.total),
+                        Note: `Size: ${orderData.size} | Qty: ${orderData.quantity}`,
+                        TProduit: `${SITE_CONFIG.title} (${orderData.size})`,
+                        id_Externe: orderData.orderId,
+                        Source: "L2M_Website"
+                    }]
+                };
+
+                try {
+                    const res = await fetch("https://procolis.com/api_v1/add_colis", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "token": SITE_CONFIG.zrExpress.token,
+                            "key": SITE_CONFIG.zrExpress.key
+                        },
+                        body: JSON.stringify(zrPayload)
+                    });
+                    zrStatus = res.ok ? "تم الإرسال إلى ZR Express ✓" : "تمت المحاولة (تحقق من CORS/المفاتيح)";
+                } catch (err) {
+                    // Browser CORS note: Direct client-to-ZR calls may be blocked by CORS unless proxied via Google Apps Script
+                    zrStatus = "ملاحظة: يفضل الإرسال عبر Apps Script لتجاوز CORS";
+                }
+            }
+
+            // Save to session log for Admin preview
+            orderData.sheetStatus = sheetStatus;
+            orderData.zrStatus = zrStatus;
+            sessionOrders.unshift(orderData);
+            updateSessionOrdersUI();
+
+            // Reset button state
+            btn.disabled = false;
+            btnText.textContent = "تأكيد الطلب الآن • الدفع عند الاستلام";
+            spinner.classList.add("hidden");
+
+            // Show Receipt Modal
+            document.getElementById("receiptDetails").innerHTML = `
+                <div class="flex justify-between"><span>رقم الطلب:</span><span class="font-mono text-white font-bold">${orderData.orderId}</span></div>
+                <div class="flex justify-between"><span>الاسم:</span><span class="text-white">${orderData.customerName}</span></div>
+                <div class="flex justify-between"><span>الهاتف:</span><span class="text-white" dir="ltr">${orderData.phone}</span></div>
+                <div class="flex justify-between"><span>الوجهة:</span><span class="text-white">${orderData.wilayaName} - ${orderData.commune}</span></div>
+                <div class="flex justify-between"><span>المقاس والكمية:</span><span class="text-white">${orderData.size} × ${orderData.quantity}</span></div>
+                <div class="flex justify-between border-t border-white/10 pt-2 mt-2 font-bold text-sm">
+                    <span>المبلغ عند الاستلام:</span>
+                    <span class="text-emerald-400">${formatDA(orderData.total)}</span>
+                </div>
+            `;
+            openModal("receiptModal");
+            document.getElementById("codForm").reset();
+            onWilayaChange();
+            quantity = 1;
+            document.getElementById("qtyDisplay").textContent = "1";
+            document.getElementById("summaryQty").textContent = "1";
+            updateTotals();
+            pendingOrderData = null;
+        }
+
+        /* ==========================================================================
+           ADMIN CONTROL PANEL & EXPORT FUNCTIONALITY
+           ========================================================================== */
+        function openAdminGate() {
+            document.getElementById("adminPinInput").value = "";
+            openModal("adminPinModal");
+            setTimeout(() => document.getElementById("adminPinInput").focus(), 100);
+        }
+
+        function verifyAdminPin() {
+            const entered = document.getElementById("adminPinInput").value;
+            if (entered === SITE_CONFIG.adminPin) {
+                closeModal("adminPinModal");
+                loadConfigIntoAdmin();
+                openModal("adminPanelModal");
+            } else {
+                showToast("الرمز السري غير صحيح! الرمز الافتراضي هو 2026", "error");
+            }
+        }
+
+        function loadConfigIntoAdmin() {
+            document.getElementById("cfgTitle").value = SITE_CONFIG.title;
+            document.getElementById("cfgPrice").value = SITE_CONFIG.price;
+            document.getElementById("cfgOldPrice").value = SITE_CONFIG.oldPrice;
+            document.getElementById("cfgStockText").value = SITE_CONFIG.stockText;
+            document.getElementById("cfgInsta").value = SITE_CONFIG.instagram;
+            document.getElementById("cfgAdminPin").value = SITE_CONFIG.adminPin;
+
+            document.getElementById("cfgSheetUrl").value = SITE_CONFIG.googleSheetUrl;
+            document.getElementById("cfgZrEnabled").checked = SITE_CONFIG.zrExpress.enabled;
+            document.getElementById("cfgZrToken").value = SITE_CONFIG.zrExpress.token;
+            document.getElementById("cfgZrKey").value = SITE_CONFIG.zrExpress.key;
+
+            document.getElementById("cfgShipNorthHome").value = SITE_CONFIG.shipping.northHome;
+            document.getElementById("cfgShipNorthDesk").value = SITE_CONFIG.shipping.northDesk;
+            document.getElementById("cfgShipSouthHome").value = SITE_CONFIG.shipping.southHome;
+            document.getElementById("cfgShipSouthDesk").value = SITE_CONFIG.shipping.southDesk;
+
+            // Render image editors
+            const imgContainer = document.getElementById("adminImagesEditor");
+            imgContainer.innerHTML = "";
+            SITE_CONFIG.images.forEach((img, idx) => {
+                const div = document.createElement("div");
+                div.className = "p-3 rounded-xl bg-white/5 border border-white/10 space-y-2";
+                div.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img id="adminImgPreview_${idx}" src="${img.url}" class="w-12 h-14 rounded-lg object-cover border border-white/10" onerror="this.src='https://placehold.co/100x120/09090b/fff?text=IMG'">
+                        <div class="flex-1">
+                            <input type="text" id="cfgImgLabel_${idx}" value="${img.label}" class="premium-input w-full px-2.5 py-1.5 rounded-lg text-[11px] mb-1.5" placeholder="وصف الصورة">
+                            <label class="inline-block px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-[10px] text-white cursor-pointer transition">
+                                اختر صورة من جهازك
+                                <input type="file" accept="image/*" class="hidden" onchange="handleLocalImageUpload(event, ${idx})">
+                            </label>
+                        </div>
+                    </div>
+                    <input type="text" id="cfgImgUrl_${idx}" value="${img.url}" dir="ltr" placeholder="أو الصق رابط الصورة المباشر هنا (https://...)" class="premium-input w-full px-2.5 py-1.5 rounded-lg text-[11px] text-left font-mono" oninput="document.getElementById('adminImgPreview_${idx}').src = this.value">
+                `;
+                imgContainer.appendChild(div);
+            });
+        }
+
+        function handleLocalImageUpload(event, idx) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const dataUrl = e.target.result;
+                document.getElementById(`cfgImgUrl_${idx}`).value = dataUrl;
+                document.getElementById(`adminImgPreview_${idx}`).src = dataUrl;
+                showToast("تم تحميل الصورة بنجاح! اضغط حفظ لتطبيقها.", "success");
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function applyAdminSettings() {
+            SITE_CONFIG.title = document.getElementById("cfgTitle").value.trim() || SITE_CONFIG.title;
+            SITE_CONFIG.price = parseInt(document.getElementById("cfgPrice").value) || SITE_CONFIG.price;
+            SITE_CONFIG.oldPrice = parseInt(document.getElementById("cfgOldPrice").value) || SITE_CONFIG.oldPrice;
+            SITE_CONFIG.stockText = document.getElementById("cfgStockText").value.trim();
+            SITE_CONFIG.instagram = document.getElementById("cfgInsta").value.trim().replace("@", "");
+            SITE_CONFIG.adminPin = document.getElementById("cfgAdminPin").value.trim() || SITE_CONFIG.adminPin;
+
+            SITE_CONFIG.googleSheetUrl = document.getElementById("cfgSheetUrl").value.trim();
+            SITE_CONFIG.zrExpress.enabled = document.getElementById("cfgZrEnabled").checked;
+            SITE_CONFIG.zrExpress.token = document.getElementById("cfgZrToken").value.trim();
+            SITE_CONFIG.zrExpress.key = document.getElementById("cfgZrKey").value.trim();
+
+            SITE_CONFIG.shipping.northHome = parseInt(document.getElementById("cfgShipNorthHome").value) || 600;
+            SITE_CONFIG.shipping.northDesk = parseInt(document.getElementById("cfgShipNorthDesk").value) || 400;
+            SITE_CONFIG.shipping.southHome = parseInt(document.getElementById("cfgShipSouthHome").value) || 1000;
+            SITE_CONFIG.shipping.southDesk = parseInt(document.getElementById("cfgShipSouthDesk").value) || 700;
+
+            SITE_CONFIG.images.forEach((img, idx) => {
+                img.label = document.getElementById(`cfgImgLabel_${idx}`).value.trim() || img.label;
+                img.url = document.getElementById(`cfgImgUrl_${idx}`).value.trim() || img.url;
+            });
+
+            // Save to LocalStorage for persistence across reloads
+            localStorage.setItem('L2M_SITE_CONFIG', JSON.stringify(SITE_CONFIG));
+
+            renderStoreUI();
+            showToast("تم حفظ وتطبيق الإعدادات بنجاح!", "success");
+        }
+
+        function downloadUpdatedSite() {
+            applyAdminSettings();
+            // Serialize current HTML and inject updated SITE_CONFIG so it works permanently on TiinyHost / Vercel
+            let htmlDoc = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+            const configRegex = /let SITE_CONFIG = \{[\s\S]*?\n        \};/;
+            const newConfigStr = "let SITE_CONFIG = " + JSON.stringify(SITE_CONFIG, null, 4) + ";";
+            htmlDoc = htmlDoc.replace(configRegex, newConfigStr);
+
+            const blob = new Blob([htmlDoc], { type: "text/html;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "index.html";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast("تم تحميل ملف index.html جاهزاً للرفع على TiinyHost أو Vercel!", "success");
+        }
+
+        function copyGoogleScriptCode() {
+            const scriptCode = `function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(["رقم الطلب", "التاريخ", "المنتج", "المقاس", "الكمية", "الاسم", "الهاتف", "الولاية", "البلدية", "العنوان", "التوصيل", "سعر التوصيل", "المجموع"]);
+  }
+  sheet.appendRow([
+    data.orderId, data.date, data.product, data.size, data.quantity,
+    data.customerName, data.phone, data.wilayaName, data.commune,
+    data.address, data.deliveryType, data.shippingCost, data.total
+  ]);
+  return ContentService.createTextOutput(JSON.stringify({status: "success"})).setMimeType(ContentService.MimeType.JSON);
+}`;
+            const ta = document.createElement("textarea");
+            ta.value = scriptCode;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            document.body.removeChild(ta);
+            showToast("تم نسخ كود Google Apps Script! الصقه في Google Sheets.", "success");
+        }
+
+        function updateSessionOrdersUI() {
+            document.getElementById("ordersCountBadge").textContent = sessionOrders.length;
+            const container = document.getElementById("sessionOrdersList");
+            if (sessionOrders.length === 0) return;
+            container.innerHTML = sessionOrders.map(o => `
+                <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1.5">
+                    <div class="flex justify-between font-bold text-white">
+                        <span>${o.orderId} — ${o.customerName} (${o.phone})</span>
+                        <span class="text-emerald-400">${formatDA(o.total)}</span>
+                    </div>
+                    <div class="text-zinc-400">${o.wilayaName} / ${o.commune} — ${o.deliveryType} — مقاس ${o.size} (×${o.quantity})</div>
+                    <div class="flex gap-3 text-[10px] pt-1">
+                        <span class="px-2 py-0.5 rounded bg-white/10 text-zinc-200">Sheets: ${o.sheetStatus}</span>
+                        <span class="px-2 py-0.5 rounded bg-white/10 text-zinc-200">ZR: ${o.zrStatus}</span>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function switchAdminTab(tabName) {
+            document.querySelectorAll(".admin-panel").forEach(p => p.classList.add("hidden"));
+            document.querySelectorAll(".admin-tab").forEach(t => {
+                t.classList.remove("bg-white", "text-black");
+                t.classList.add("bg-white/5", "text-zinc-400");
+            });
+            document.getElementById("panel-" + tabName).classList.remove("hidden");
+            const activeTab = document.getElementById("tab-" + tabName);
+            activeTab.classList.add("bg-white", "text-black");
+            activeTab.classList.remove("bg-white/5", "text-zinc-400");
+        }
+
+        /* ==========================================================================
+           MODAL, TOAST & SCROLL REVEAL HELPERS
+           ========================================================================== */
+        function openModal(id) {
+            const el = document.getElementById(id);
+            el.classList.remove("hidden");
+            el.classList.add("flex");
+        }
+        function closeModal(id) {
+            const el = document.getElementById(id);
+            el.classList.add("hidden");
+            el.classList.remove("flex");
+        }
+        function openSizeGuide() { openModal("sizeGuideModal"); }
+
+        let toastTimer;
+        function showToast(msg, type = "success") {
+            const box = document.getElementById("toastBox");
+            const text = document.getElementById("toastMessage");
+            text.innerHTML = (type === "error" ? "⚠️ " : "✅ ") + msg;
+            box.classList.remove("hidden");
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => box.classList.add("hidden"), 3500);
+        }
+
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            const check = () => {
+                reveals.forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 60) {
+                        el.classList.add("active");
+                    }
+                });
+            };
+            window.addEventListener("scroll", check);
+            check();
+        }
+    </script>
+</body>
+</html>
